@@ -1,116 +1,96 @@
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    background-color: blanchedalmond;
-    width: 100%;
-}
-
-.nav-logo {
-    width: 50px;
-    height: auto;
-    padding: 3px;
-    align-items: center;
-}
-
-.footer-navbar{
-    padding: 10px 5px;
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(90, 91, 91);
-    align-items: center;
-}
-.nav-buttons {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    padding: 3px 30px;
-    gap: 20px;
-}
-
-.nav-buttons a {
-    color: darkgray;
-    text-decoration: none;
-    background-color: black;
-}
-
-.nav-buttons a:hover {
-    color: crimson;
-    text-decoration: underline;
-}
-
 body {
     margin: 0;
     background-image: url(bg.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: Arial, sans-serif;
-    margin: 40px;
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 26px;
 }
 
 h2 {
-    font-size: 28px;
+    font-size: 20px;
 }
 
-p, a {
-    font-size: 20px;
+p, li {
+    font-size: 16px;
     line-height: 1.6;
 }
 
-.main{
-    padding: 50px 0px;
+.main {
+    flex: 1;
+    padding: 20px 0;
 }
+.projects,
+.sidebar,
+.page-box {
+    background-color: white;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.page-box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.project-img {
+    height: 180px;
+    object-fit: cover;
+}
+
+.sidebar-logo {
+    display: none;        
+}
+
+.sidebar ul {
+    padding-left: 20px;
+}
+
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 10px;
 }
 
 .box {
     background-color: red;
+    color: white;
+    padding: 10px;
 }
 
-.row{
-    background-color: white;
-    justify-content: space-between;
+.box-blue {
+    background-color: blue;
 }
-.Title{
+
+.box-green {
+    background-color: green;
+}
+
+.footer-navbar {
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
     text-align: center;
+    background-color: rgb(90, 91, 91);
 }
 
-@media (max-width: 768px) {
-
-    body {
-        margin: 20px;
-    }
-
-    h1 {
-        font-size: 26px;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
-    p, a {
-        font-size: 16px;
-    }
-
-    .grid-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
+.footer-navbar a,
+.footer-navbar p {
+    color: white;
+    font-size: 14px;
+    margin: 0;
 }
 
-@media (max-width: 575px) {
-
-    body {
-        margin: 30px;
-    }
+@media (min-width: 768px) {
 
     h1 {
         font-size: 32px;
@@ -120,13 +100,94 @@ p, a {
         font-size: 24px;
     }
 
-    p, a {
+    p, li {
         font-size: 18px;
     }
 
+    .main {
+        padding: 30px 0;
+    }
+
+    .projects,
+    .sidebar,
+    .page-box {
+        padding: 20px;
+    }
+
+    .project-img {
+        height: 200px;
+    }
+
+    .sidebar-logo {
+        display: block;     
+        max-width: 200px;
+        margin: 0 auto 15px;
+    }
+
     .grid-container {
-        display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        padding: 10px 30px;
+    }
+
+    .footer-navbar a,
+    .footer-navbar p {
+        font-size: 16px;
     }
 }
 
+@media (min-width: 992px) {
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    p, li {
+        font-size: 20px;
+    }
+
+    .main {
+        padding: 50px 0;
+    }
+
+    .projects,
+    .sidebar,
+    .page-box {
+        padding: 25px;
+    }
+
+    .project-img {
+        height: 160px;
+    }
+
+    .sidebar {
+        position: sticky;  
+        top: 20px;
+    }
+
+    .sidebar-logo {
+        max-width: 100%;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .footer-navbar {
+        padding: 10px 60px;
+    }
+
+    .footer-navbar a,
+    .footer-navbar p {
+        font-size: 18px;
+    }
+}
