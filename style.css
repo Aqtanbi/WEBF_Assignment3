@@ -16,10 +16,9 @@
     padding: 10px 5px;
     display: flex;
     justify-content: space-between;
-    background-color: darkcyan;
+    background-color: rgb(90, 91, 91);
     align-items: center;
 }
-
 .nav-buttons {
     align-items: center;
     display: flex;
@@ -63,7 +62,9 @@ p, a {
     line-height: 1.6;
 }
 
-
+.main{
+    padding: 50px 0px;
+}
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -74,8 +75,11 @@ p, a {
 }
 
 .row{
-    background-color: aquamarine;
+    background-color: white;
     justify-content: space-between;
+}
+.Title{
+    text-align: center;
 }
 
 @media (max-width: 768px) {
